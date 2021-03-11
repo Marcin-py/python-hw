@@ -6,8 +6,8 @@ def collatz(number):
         print(3 * number + 1)
         return 3 * number + 1
 
-
-n = int(input())
+print('Input a number')
+n = int(input()) 
 
 while n != 1:
     n = collatz(n)

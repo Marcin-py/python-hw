@@ -4,5 +4,5 @@ def list_thing(words):
     return '{}, and {}'.format(', '.join(words[:-1]), words[-1])
 
 
-lit = ['banana', 'apple', 'oragne', 'strawberry']
+lit = ['banana', 'apple', 'oragne']
 print(list_thing(lit))
