@@ -6,11 +6,13 @@ def displayInventory(inventory):
         print(str(v) + ' ' + str(k))
     print("Total number of items: " + str(item_total))
 
-def addToInventory(inventory, addItems):
-    for k in range(len(addItems)):
-        inventory.setdefault(addItems[k], 0)
-        inventory[addItems[k]] += 1
-    return(inventory)
+def addToInventory(inventory, lootlist):
+    for i in range(len(lootlist)):
+        if lootlist[i] in inventory:
+            inventory[lootlist[i]] = inventory[lootlist[i]] + 1
+        else:
+            inventory.setdefault(lootlist[i],1)
+    return inventory
 
 inventory = {'rope': 1, 'torches': 1, 'gold coins': 3, 'daggers': 5, 'arrows': 12, 'knives': 5}
 dragonLoot = ['gold coins', 'daggers', 'gold coins', 'gold coins', 'ruby']
